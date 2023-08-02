@@ -10,7 +10,10 @@ import SwiftUI
 struct NewToDoView: View {
     @State var title = ""
     @State var isImportant = false
+    @Binding var toDoItems: [ToDoItem]
+    @Binding var showNewTask : Bool
     var body: some View {
+
         VStack {
             Text("Task title :")
                 .font(.title)
@@ -24,16 +27,21 @@ struct NewToDoView: View {
                 Text ("Is it important?")
             } //toggle closing
             .padding()
-            Button(action : {}) {
-                Text("Add")
+            Button("Add") {
+                self.addTask(title : self.title, isImportant : self.isImportant)
+                self.showNewTask = false
             } //button closing
         } //vstack closing
     } //closing bracket
+    private func addTask(title : String, isImportant : Bool = false) {
+        let task = ToDoItem(title : title, isImportant : isImportant)
+        toDoItems.append(task)
+    } //func closing
 } //closing bracket
 
 //no editing under here
 struct NewToDoView_Previews: PreviewProvider {
     static var previews: some View {
-        NewToDoView(title : "", isImportant : false)
+        NewToDoView(title : "", isImportant : false, toDoItems: .constant([]), showNewTask: .constant(true))
     }
 }
