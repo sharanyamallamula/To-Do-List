@@ -13,6 +13,8 @@
 		BD8A1F372A7A9161008C50D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8A1F362A7A9161008C50D2 /* Preview Assets.xcassets */; };
 		BD8A1F402A7A94B9008C50D2 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8A1F3F2A7A94B9008C50D2 /* ToDoItem.swift */; };
 		BD8A1F422A7A96DF008C50D2 /* NewToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8A1F412A7A96DF008C50D2 /* NewToDoView.swift */; };
+		BDA454E42A7A9FD9001F99DB /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA454E32A7A9FD9001F99DB /* Persistance.swift */; };
+		BDA454E72A7AA1B0001F99DB /* To Do List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDA454E52A7AA1B0001F99DB /* To Do List.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		BD8A1F362A7A9161008C50D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD8A1F3F2A7A94B9008C50D2 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		BD8A1F412A7A96DF008C50D2 /* NewToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoView.swift; sourceTree = "<group>"; };
+		BDA454E32A7A9FD9001F99DB /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		BDA454E62A7AA1B0001F99DB /* To Do List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "To Do List.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +61,12 @@
 			children = (
 				BD8A1F2F2A7A9160008C50D2 /* To_Do_ListApp.swift */,
 				BD8A1F312A7A9160008C50D2 /* ContentView.swift */,
+				BDA454E32A7A9FD9001F99DB /* Persistance.swift */,
 				BD8A1F412A7A96DF008C50D2 /* NewToDoView.swift */,
 				BD8A1F3F2A7A94B9008C50D2 /* ToDoItem.swift */,
 				BD8A1F332A7A9161008C50D2 /* Assets.xcassets */,
 				BD8A1F352A7A9161008C50D2 /* Preview Content */,
+				BDA454E52A7AA1B0001F99DB /* To Do List.xcdatamodeld */,
 			);
 			path = "To Do List";
 			sourceTree = "<group>";
@@ -146,7 +152,9 @@
 				BD8A1F322A7A9160008C50D2 /* ContentView.swift in Sources */,
 				BD8A1F402A7A94B9008C50D2 /* ToDoItem.swift in Sources */,
 				BD8A1F302A7A9160008C50D2 /* To_Do_ListApp.swift in Sources */,
+				BDA454E42A7A9FD9001F99DB /* Persistance.swift in Sources */,
 				BD8A1F422A7A96DF008C50D2 /* NewToDoView.swift in Sources */,
+				BDA454E72A7AA1B0001F99DB /* To Do List.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +353,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BDA454E52A7AA1B0001F99DB /* To Do List.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BDA454E62A7AA1B0001F99DB /* To Do List.xcdatamodel */,
+			);
+			currentVersion = BDA454E62A7AA1B0001F99DB /* To Do List.xcdatamodel */;
+			path = "To Do List.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BD8A1F242A7A9160008C50D2 /* Project object */;
 }

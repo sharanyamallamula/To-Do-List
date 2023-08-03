@@ -10,8 +10,8 @@ import SwiftUI
 struct NewToDoView: View {
     @State var title = ""
     @State var isImportant = false
-    @Binding var toDoItems: [ToDoItem]
     @Binding var showNewTask : Bool
+    @Environment(\.managedObjectContext) var context
     var body: some View {
 
         VStack {
@@ -34,14 +34,22 @@ struct NewToDoView: View {
         } //vstack closing
     } //closing bracket
     private func addTask(title : String, isImportant : Bool = false) {
-        let task = ToDoItem(title : title, isImportant : isImportant)
-        toDoItems.append(task)
+        let task = ToDo(context: context)
+        task.id = UUID()
+        task.title = title
+        task.isImportant = isImportant
+                
+        do {
+                    try context.save()
+        } catch {
+                    print(error)
+        }
     } //func closing
 } //closing bracket
 
 //no editing under here
 struct NewToDoView_Previews: PreviewProvider {
     static var previews: some View {
-        NewToDoView(title : "", isImportant : false, toDoItems: .constant([]), showNewTask: .constant(true))
+        NewToDoView(title : "", isImportant : false, showNewTask: .constant(true))
     }
 }
